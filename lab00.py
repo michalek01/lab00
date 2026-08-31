@@ -14,6 +14,7 @@ def flatten_and_filter(matrix):
             if item % 2 == 0:
                 result.append(item ** 3)
     return result
+print(flatten_and_filter([[1, 2, 3], [4, 5, 6], [7, 8, 9]]))
 #ToDo: The Scenario: You need to calculate the number of steps required for a starting integer to resolve to 1 under the rules of the Collatz conjecture.
 #Your Task: Write a function collatz_steps(n) that uses a while loop.
 #Define a loop that continues as long as n > 1.
@@ -29,6 +30,7 @@ def collatz_steps(n):
             n = n * 3 + 1
         steps += 1
     return steps
+print(collatz_steps(6))
 
 
 #ToDo: The Scenario: You are analyzing a string of genetic data and need to determine the frequency of each nucleotide.
@@ -45,6 +47,7 @@ def nucleotide_count(sequence):
         else:
             count_dict[nucleotide] = 1
     return count_dict
+print(nucleotide_count("GATTACA"))
 
 #ToDo: The Scenario: You have two separate lists of student IDs representing rosters for CS 202 and CS 303, and you need to find the enrollment overlaps and differences.
 
@@ -68,3 +71,8 @@ def compare_enrollments(roster_a, roster_b):
     }
 
     return result
+print(compare_enrollments([1, 2, 3, 4], [3, 4, 5, 6]))
+
+# The code that felt most unfamilar with me was the nucleotide_count function.
+# I struggled with github and cloning the repo
+# For function 2, For me to prevent an infinite loop I had to make sure that the while loop had a condition that would eventually be met, which was n > 1. I also had to ensure that the operations inside the loop would eventually lead to n becoming 1.
